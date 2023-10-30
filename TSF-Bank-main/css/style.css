@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  background: #fff;
+}
+
+/* navbar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+  justify-content: space-between;
+  background-color: rgb(224 7 103);
+  padding: 2.6rem 3rem;
+  box-shadow: 0 .5rem 1rem rgba(31, 19, 19, 0.1);
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+header .logo {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+header .navbar a {
+  font-size: 1.6rem;
+  margin-left: 2.5rem;
+  color: rgb(248, 248, 248);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+header .navbar a:hover {
+  color: #ffaa01;
+}
+
+header a.conbtn {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 8px 20px;
+  margin-left: 30px;
+  border-radius: 4px;
+  font-weight: 700;
+  color: rgb(101, 7, 224);
+}
+
+header a.conbtn:hover {
+  color: rgb(101, 7, 224);
+  background: #facf0d;
+}
+
+/* navbar */
+
+
+/* hero */
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  min-height: 100vh;
+  align-items: center;
+  background: url(img/1567665.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+.home .content {
+  flex: 1 1 40rem;
+  padding-top: 6.5rem;
+}
+
+.home .image {
+  flex: 1 1 40rem;
+}
+
+.home .image img {
+  width: 120%;
+  height: 120%;
+  padding: 1rem;
+  animation: float 4s linear infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0rem);
+  }
+
+  50% {
+    transform: translateY(3rem);
+  }
+}
+
+.home .content h3 {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #012970;
+}
+
+.home .content p {
+  font-size: 1.7rem;
+  color: #666;
+  padding: 1rem 0;
+}
+
+.home .btn {
+  margin-top: 2rem;
+  line-height: 0;
+  padding: 1.6rem 3rem;
+  border-radius: 4em;
+  transition: 0.5s;
+  color: #fff;
+  background: rgb(224 7 103);
+  box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
+}
+
+.home .btn span {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+}
+
+.home .btn i {
+  margin-left: 0.3rem;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.home .btn:hover i {
+  transform: translateX(5px);
+}
+
+
+/* contact us */
+
+/* hamburger icon */
+#menu-bar {
+  font-size: 3rem;
+  cursor: pointer;
+  color: rgb(247, 247, 247);
+  border: .1rem solid rgb(255, 255, 255);
+  border-radius: .5rem 1.5rem;
+  padding: .5rem 1.5rem;
+  display: none;
+}
+
+@media(max-width:768px) {
+  #menu-bar {
+    display: initial;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #f7f7f7;
+    border-top: .1rem solid rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  header .navbar a {
+    margin: 1rem;
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    border: .2rem solid rgba(0, 0, 0, 0.1);
+    border-left: 0.4rem solid rgb(230, 216, 20);
+    background: rgb(26, 4, 124);
+  }
+}
+
+/* hamburger icon */
+
+/* scroll top */
+#scroll-top {
+  position: fixed;
+  top: -120%;
+  right: 2rem;
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  background: rgb(255, 196, 0);
+  color: rgb(26, 4, 124);
+  border-radius: 50%;
+  transition: 1.5s linear;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+#scroll-top.active {
+  top: calc(100% - 12rem);
+}
+
+/* scroll top */
+
+
+/* footer made with love */
+.site-footer span {
+  color: rgb(177, 174, 174);
+  font-size: 1.2rem;
+  display: block;
+  position: absolute;
+  left: 80%;
+  top: 35%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+}
+
+.site-footer span a {
+  text-decoration: none;
+}
+
+.site-footer .fa {
+  color: #E90606;
+  margin: 0 .3rem;
+  font-size: 1rem;
+  animation: pound .35s infinite alternate;
+}
+
+@-webkit-keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* footer made with love */
